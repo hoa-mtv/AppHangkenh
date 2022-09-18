@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HangKenhAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NhapDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NhapId" Type="int" />
+    <Property Name="MaHang" Type="varchar" MaxLength="20" />
+    <Property Name="Soluong" Type="int" />
+    <Property Name="Trongluong" Type="float" />
+  </EntityType>
+  <EntityType Name="Nhapinfoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaPhieu" Type="varchar" MaxLength="10" />
+    <Property Name="DateCreate" Type="datetime" />
+    <Property Name="UserNhan" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserTra" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserLogins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="150" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="XuatDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="XuatId" Type="int" />
+    <Property Name="PhieuYc" Type="varchar" MaxLength="10" />
+    <Property Name="MaHang" Type="varchar" MaxLength="20" />
+    <Property Name="Soluong" Type="int" />
+    <Property Name="Trongluong" Type="float" />
+  </EntityType>
+  <EntityType Name="XuatInfoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaPhieu" Type="varchar" MaxLength="10" />
+    <Property Name="DateCreate" Type="datetime" />
+    <Property Name="UserNhan" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserXuat" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="HangKenhAppModelStoreContainer">
+    <EntitySet Name="NhapDetails" EntityType="Self.NhapDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nhapinfoes" EntityType="Self.Nhapinfoes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XuatDetails" EntityType="Self.XuatDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XuatInfoes" EntityType="Self.XuatInfoes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

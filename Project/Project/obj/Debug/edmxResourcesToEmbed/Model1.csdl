@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HangKenhAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NhapDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NhapId" Type="Int32" />
+    <Property Name="MaHang" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Soluong" Type="Int32" />
+    <Property Name="Trongluong" Type="Double" />
+  </EntityType>
+  <EntityType Name="Nhapinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPhieu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreate" Type="DateTime" Precision="3" />
+    <Property Name="UserNhan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserTra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="XuatDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="XuatId" Type="Int32" />
+    <Property Name="PhieuYc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaHang" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Soluong" Type="Int32" />
+    <Property Name="Trongluong" Type="Double" />
+  </EntityType>
+  <EntityType Name="XuatInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPhieu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreate" Type="DateTime" Precision="3" />
+    <Property Name="UserNhan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserXuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HangKenhAppEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NhapDetails" EntityType="Self.NhapDetail" />
+    <EntitySet Name="Nhapinfoes" EntityType="Self.Nhapinfo" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+    <EntitySet Name="XuatDetails" EntityType="Self.XuatDetail" />
+    <EntitySet Name="XuatInfoes" EntityType="Self.XuatInfo" />
+  </EntityContainer>
+</Schema>
