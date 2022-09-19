@@ -10,8 +10,8 @@ namespace System
     public class Help
     {
         //public static string stringConn = "Data Source=192.168.1.202;initial catalog=MinhDoanPro;Uid=Outnerr;Pwd=5RutE5gUhM3omJ";//max pool size=1
-        public static string stringConn = "Data Source=DESKTOP-1NTRD12\\SQLEXPRESS;initial catalog=HangKenhApp;Integrated Security=true";//max pool size=1
-        //public static string stringConn = ConfigurationManager.ConnectionStrings["DefautEntities"].ConnectionString;
+        public static string stringConn = "Data Source=DESKTOP-1NTRD12\\SQLEXPRESS;initial catalog=HangKenhApp;Uid=sa;Pwd=12345678";//max pool size=1
+
 
         public static SqlConnection open()
         {

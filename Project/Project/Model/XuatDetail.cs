@@ -11,7 +11,9 @@ namespace Project.Model
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Data;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class XuatDetail
     {
         public int Id { get; set; }

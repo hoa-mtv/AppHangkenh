@@ -132,7 +132,7 @@
           <Property Name="UserNhan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserXuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="HangKenhAppEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HangKenhAppEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="NhapDetails" EntityType="Self.NhapDetail" />
           <EntitySet Name="Nhapinfoes" EntityType="Self.Nhapinfo" />
           <EntitySet Name="tests" EntityType="Self.test" />
@@ -145,7 +145,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HangKenhAppModelStoreContainer" CdmEntityContainer="HangKenhAppEntities2">
+        <EntityContainerMapping StorageEntityContainer="HangKenhAppModelStoreContainer" CdmEntityContainer="HangKenhAppEntities">
           <EntitySetMapping Name="NhapDetails">
             <EntityTypeMapping TypeName="HangKenhAppModel.NhapDetail">
               <MappingFragment StoreEntitySet="NhapDetails">

@@ -13,10 +13,10 @@ namespace Project.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HangKenhAppEntities2 : DbContext
+    public partial class HangKenhAppEntities : DbContext
     {
-        public HangKenhAppEntities2()
-            : base("name=HangKenhAppEntities2")
+        public HangKenhAppEntities()
+            : base("name=HangKenhAppEntities")
         {
         }
     

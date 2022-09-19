@@ -14,7 +14,7 @@ namespace Project
 {
     public partial class Form1 : Form
     {
-        HangKenhAppEntities2 db = new HangKenhAppEntities2();
+        HangKenhAppEntities db = new HangKenhAppEntities();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,16 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             //kiểm tra xem user naem + mk đugns chưa
-            var a = db.tests.ToList();
+            try
+            {
+                var a = db.tests.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+           
              xuat fr = new xuat();
             fr.Show();
         }
